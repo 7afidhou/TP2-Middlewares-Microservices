@@ -10,15 +10,17 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class MsFormationApplication implements CommandLineRunner {
 
-    @Autowired
-    FormationRep formationRep;
+
 
     public static void main(String[] args) {
         SpringApplication.run(MsFormationApplication.class, args);
     }
-
+    @Autowired
+    FormationRep formationRep;
     @Override
     public void  run(String... args) throws Exception  {
+        formationRep.save(new Formation(null,"web dev", 20));
+        formationRep.save(new Formation(null,"mobile dev", 10));
 
     }
 
