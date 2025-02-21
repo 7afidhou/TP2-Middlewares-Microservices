@@ -19,7 +19,6 @@ public class Controller {
     FormationRep formationRep;
 
     @GetMapping("/formation/all")
-
     public List<Formation> getAllFormations() {
         return formationRep.findAll();
     }

@@ -1,10 +1,9 @@
 package com.msgroups.msscolarite.entities;
 
+import com.msgroups.msscolarite.models.Formation;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.Date;
 
@@ -12,7 +11,6 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
 
 public class Etudiant {
 
@@ -38,5 +36,11 @@ public class Etudiant {
     @JoinColumn(name = "idEtablissement")
     @JsonIgnore
     private Etablissement etablissement;
+
+    private Long idFormation;
+
+
+    @Transient
+    private Formation formation;
 
 }
