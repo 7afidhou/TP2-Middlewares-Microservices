@@ -19,7 +19,6 @@ public class Etudiant {
     private Long idEtudiant;
 
 
-    @Column(nullable = false)
     private String nom;
 
     @Column(nullable = false)

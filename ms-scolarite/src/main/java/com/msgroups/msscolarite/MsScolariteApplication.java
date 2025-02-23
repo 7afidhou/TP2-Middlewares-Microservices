@@ -36,7 +36,7 @@ public class MsScolariteApplication implements CommandLineRunner {
         Etablissement e2 = etablissementRep.save(new Etablissement(null, "esi-alger", null));
         Etablissement e3 = etablissementRep.save(new Etablissement(null, "ensia", null));
 
-        etudiantRep.save(new Etudiant(null, "ismail", "isi", Date.valueOf("2003-11-11"), Date.valueOf("2003-11-11"), e1, 1L, null));
+        etudiantRep.save(new Etudiant(null, "ismail", "isi", Date.valueOf("2003-11-11"), Date.valueOf("2003-11-11"), e1, 2L, null));
         etudiantRep.save(new Etudiant(null, "krimo", "isi", Date.valueOf("2003-11-11"), Date.valueOf("2003-11-11"), e2, 1L, null));
         etudiantRep.save(new Etudiant(null, "ilyes", "isi", Date.valueOf("2003-11-11"), Date.valueOf("2003-11-11"), e3, 1L, null));
 

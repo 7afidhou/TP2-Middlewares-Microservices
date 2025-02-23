@@ -6,8 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
+@EnableFeignClients
 public class MsFormationApplication implements CommandLineRunner {
 
 
@@ -19,8 +21,8 @@ public class MsFormationApplication implements CommandLineRunner {
     FormationRep formationRep;
     @Override
     public void  run(String... args) throws Exception  {
-        formationRep.save(new Formation(null,"web dev", 20));
-        formationRep.save(new Formation(null,"mobile dev", 10));
+        formationRep.save(new Formation(null,"web dev", 20,null));
+        formationRep.save(new Formation(null,"mobile dev", 10,null));
 
     }
 
