@@ -3,7 +3,7 @@
   <component name="CompilerConfiguration">
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
-      <profile name="Annotation profile for ms-scolarite" enabled="true">
+      <profile name="Annotation profile for ms-library" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -14,6 +14,7 @@
         <module name="ms-formation" />
         <module name="ms-scolarite" />
         <module name="ms-bourse" />
+        <module name="ms-library" />
       </profile>
     </annotationProcessing>
   </component>
@@ -21,6 +22,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="ms-bourse" options="-parameters" />
       <module name="ms-formation" options="-parameters" />
+      <module name="ms-library" options="-parameters" />
       <module name="ms-scolarite" options="-parameters" />
     </option>
   </component>

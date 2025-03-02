@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api")
@@ -45,8 +47,20 @@ public class Controller {
 
 
 
-        //        formation.setEtudiants(etudiantProxy.getEtudiants(id,"pr"));
-        //        return formation;
     }
+
+    @GetMapping("/formation/count/{id}")
+    private Map<String, Object> getFormationWithEtudiantCount(@PathVariable("id") Long id) {
+        Formation f = formationRep.findById(id).orElseThrow(() -> new RuntimeException("Formation not found"));
+
+        int studentCount = etudiantProxy.getEtudiants(id, "projectiontoformation").getContent().size();
+
+        Map<String, Object> response = new HashMap<>();
+        response.put("formation", f);
+        response.put("studentCount", studentCount);
+
+        return response;
+    }
+
 
 }

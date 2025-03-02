@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/ms-bourse/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ms-formation/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ms-library/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ms-scolarite/src/main/java" charset="UTF-8" />
   </component>
 </project>
